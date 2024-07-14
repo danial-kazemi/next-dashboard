@@ -99,7 +99,7 @@ function Sidebar() {
   ]
 
   return (
-    <div className="sidebar sticky flex flex-col bg-slate-800 p-3">
+    <div className="sidebar w-full sticky sm:h-vh	flex flex-col bg-slate-800 p-3">
       <div className="user flex gap-2 items-center">
         <Image className="rounded-lg bg-cover" src="/noAvatar1.png" alt="user icon" width="50" height="50" />
         <div className="user__detail flex flex-col font-medium text-xs">
@@ -121,6 +121,9 @@ function Sidebar() {
               ))
             }        
       </ul>
+      <button className="ml-2 p-2 flex items-center gap-2 my-2 hover:bg-slate-400/10 active:bg-slate-400 rounded-lg">
+            <MdLogout />Logout
+      </button>
     </div>
   )
 }
