@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from '../ui/dashboard/sidebar/sidebar'
 import Navbar from '../ui/dashboard/navbar/navbar'
+import Footer from '../ui/dashboard/footer/footer'
 
 function layout({children} : Readonly <{children: React.ReactNode}>) {
   return (
@@ -10,7 +11,8 @@ function layout({children} : Readonly <{children: React.ReactNode}>) {
         </div>
         <div className='hidden sm:flex sm:flex-col gap-0 sm:gap-3 flex-nowrap w-full sm:w-full'>
             <Navbar />
-            {children}            
+            {children}
+            <Footer />          
         </div>
     </div>
   )

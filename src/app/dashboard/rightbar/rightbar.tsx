@@ -2,7 +2,7 @@
 
 function Rightbar() {
   return (
-    <div>Rightbar</div>
+   <></>
   )
 }
 
