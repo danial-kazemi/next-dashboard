@@ -1,10 +1,15 @@
+'use client'
 import Search from "@/app/ui/dashboard/search/search"
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import { useState } from "react";
 
 
 function UsersPage() {
+  const [previousUsersStatus, setPreviousUsersStatus] = useState(false);
+  const [nextUsersStatus, setNextUsersStatus] = useState(true);
+  
   return (
     <section className="users bg-slate-800 rounded-lg p-3">
       <header className="users__header flex justify-between items-center w-full p-3">
@@ -76,7 +81,7 @@ function UsersPage() {
               </tr>
           </tbody>
         </table>
-        <Pagination />
+        <Pagination previousStatus={previousUsersStatus}  nextStatus={nextUsersStatus} />
 
     </section>
   )

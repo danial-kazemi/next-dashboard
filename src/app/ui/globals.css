@@ -9,3 +9,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
+table tbody tr td {
+    padding: .5rem 0;;
+}

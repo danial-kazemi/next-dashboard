@@ -37,13 +37,13 @@ function Sidebar() {
         },
         {
           id: 3,
-          title: "Dashboard",
+          title: "Products",
           path: "/dashboard/products",
           icon: <MdShoppingBag />
         },
         {
           id: 4,
-          title: "Dashboard",
+          title: "Transactions",
           path: "/dashboard/transactions",
           icon: <MdAttachMoney />
         },
@@ -99,7 +99,7 @@ function Sidebar() {
   ]
 
   return (
-    <div className="sidebar w-full sticky sm:h-vh	flex flex-col bg-slate-800 p-3">
+    <div className="sidebar w-full sticky sm:min-h-screen	flex flex-col bg-slate-800 p-3">
       <div className="user flex gap-2 items-center">
         <Image className="rounded-lg bg-cover" src="/noAvatar1.png" alt="user icon" width="50" height="50" />
         <div className="user__detail flex flex-col font-medium text-xs">
