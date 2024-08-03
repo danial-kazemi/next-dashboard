@@ -32,11 +32,11 @@ function Navbar() {
 
 
   return (
-    <nav className="hidden sm:flex justify-between items-center p-5 rounded-lg bg-slate-800">
-      <div className="capitalize font-bold">
+    <nav className="flex justify-between items-center p-5 rounded-lg bg-slate-800">
+      <div className="hidden sm:block capitalize font-bold text-sm">
         {pathName.split("/").pop()}
       </div>
-      <div className="menu flex items-center gap-2">
+      <div className="menu flex w-full sm:w-auto justify-between sm:justify-normal items-center gap-2">
         <div className="search relative flex gap-2 items-center">
           <button className="absolute left-1" type="submit"><MdSearch size={20}/></button>
           <input type="text" placeholder="Search..." className="rounded-lg p-1 outline-none pl-6 bg-slate-400/20"/>

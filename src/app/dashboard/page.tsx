@@ -5,17 +5,18 @@ import Rightbar from "../ui/dashboard/rightbar/rightbar";
 import Transactions from "../ui/dashboard/transactions/transactions";
 function Dashboard() {
   return (
-    <div className="dashboard flex flex-col md:flex-row flex-nowrap gap-5">
-      <div className="main flex flex-auto flex-col w-full md:w-3/4 sm:gap-5">
-        <section className="cards flex gap-5 justify-between ">
+    <div className="dashboard flex flex-col md:flex-row flex-nowrap gap-3">
+      <div className="main flex flex-auto flex-col w-full lg:w-3/4 gap-3">
+        <section className="cards flex gap-3 justify-between ">
           <Card />
           <Card />
           <Card />
         </section>         
         <Transactions />        
-        <Chart />                     
+        <Chart />
+        <Footer />                   
       </div>
-      <div className="flex flex-auto w-full md:w-1/4">
+      <div className="hidden lg:flex lg:w-1/4">
         <Rightbar />
       </div>    
     </div>

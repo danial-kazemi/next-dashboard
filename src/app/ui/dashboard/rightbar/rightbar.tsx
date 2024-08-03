@@ -4,8 +4,7 @@ import { MdPlayCircleFilled, MdReadMore } from "react-icons/md";
 
 function Rightbar() {
   return (
-    <div className="rightbar flex flex-col gap-3 fixed">
-      
+    <div className="rightbar hidden lg:flex flex-col fixed gap-3 ">      
     <div className="item flex flex-col gap-3 relative p-5 rounded-lg  bg-gradient-to-t from-slate-700">
       <div className="bg-wrapper absolute right-0 bottom-0 w-1/2 h-1/2 z-10">
         <Image className=" opacity-20 bg-contain" src={'/termius.png'}  alt="termius" fill />

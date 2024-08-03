@@ -12,3 +12,7 @@ a {
 table tbody tr td {
     padding: .5rem 0;;
 }
+
+table td {
+    text-wrap: nowrap;
+}
