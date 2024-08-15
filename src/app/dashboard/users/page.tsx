@@ -1,23 +1,16 @@
-
 import {fetchUsers} from "@/app/lib/data"
 import Search from "@/app/ui/dashboard/search/search"
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { ReactNode } from "react";
-const UsersPage = async () => {
+const UsersPage = async ({searchParams}) => {
 
-type Users = [{
-  id: string
-  username: string   
-  email: string
-  img: string
-  isActive: boolean
-  isAdmin: boolean
-  password: string
-}]
-
-const users = await fetchUsers(); 
+  console.log(searchParams.q)
+  const query = searchParams?.q || "";
+  
+  
+  const users = await fetchUsers(query); 
 
   return (
     <section className="users w-full bg-slate-800 rounded-lg p-3">
