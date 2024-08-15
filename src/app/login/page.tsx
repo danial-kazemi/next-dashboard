@@ -7,8 +7,7 @@ function LoginPage() {
         <div className="image-container w-full flex flex-col gap-3 items-center ">
           <Image className="rounded-full" src="/noAvatar1.png" width="80" height={80} alt="user" objectFit="cover" />
           <h1 className="text-center">Login</h1>
-        </div>
-        
+        </div>        
         <form className="w-full sm:w-80 flex flex-col gap-3 mt-3" action="">
           <input className="outline-none p-3 rounded border-slate-600 border-solid border-2 w-full bg-transparent" placeholder="Email ID" type="text" name="username" />
           <input className="outline-none p-3 rounded border-slate-600 border-solid border-2 w-full bg-transparent" placeholder="Password" type="password" name="password" />
