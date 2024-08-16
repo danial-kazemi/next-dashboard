@@ -11,6 +11,7 @@ function Search({placeholder}: {placeholder: string} ) {
 
   const searchHandel = useDebouncedCallback((e : React.ChangeEvent<HTMLSelectElement>) => {
     const params = new URLSearchParams(searchParams);
+    params.set("page", '1');
     if (e.target.value.length ) {
       e.target.value.length> 2 && params.set("q",e.target.value);
     }else {

@@ -5,13 +5,11 @@ import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { ReactNode } from "react";
 const UsersPage = async ({searchParams}) => {
-
-  console.log(searchParams.q)
-  const query = searchParams?.q || "";
   
-  
-  const users = await fetchUsers(query); 
-
+  const query = searchParams?.q || ""; 
+  const page = searchParams?.page || "1";  
+  const { users, count} = await fetchUsers(query, page); 
+console.log(users)
   return (
     <section className="users w-full bg-slate-800 rounded-lg p-3">
       <header className="users__header flex justify-between items-center w-full p-3">
@@ -63,7 +61,7 @@ const UsersPage = async ({searchParams}) => {
           </tbody>
         </table>
       </div>        
-        <Pagination />
+        <Pagination count = {count} />
     </section>
   )
 }
