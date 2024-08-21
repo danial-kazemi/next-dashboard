@@ -8,8 +8,7 @@ const UsersPage = async ({searchParams}) => {
   
   const query = searchParams?.q || ""; 
   const page = searchParams?.page || "1";  
-  const { users, count} = await fetchUsers(query, page); 
-console.log(users)
+  const { users , count} = await fetchUsers(query, page); 
   return (
     <section className="users w-full bg-slate-800 rounded-lg p-3">
       <header className="users__header flex justify-between items-center w-full p-3">
