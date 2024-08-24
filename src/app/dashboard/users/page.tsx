@@ -3,7 +3,9 @@ import Search from "@/app/ui/dashboard/search/search"
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import { deleteUser } from "@/app/lib/actions"
 import { ReactNode } from "react";
+import { Product } from "@/app/lib/models";
 const UsersPage = async ({searchParams}) => {
   
   const query = searchParams?.q || ""; 
@@ -46,12 +48,13 @@ const UsersPage = async ({searchParams}) => {
                         <button className="bg-green-700 text-white rounded-lg text-sm py-1 px-2  border-none cursor-pointer">
                           View
                         </button>
-                      </Link>
-                      <Link href="/">
+                      </Link>                     
+                      <form action={deleteUser}>
+                        <input type="hidden" name="id" value={user.id} />
                         <button className="bg-red-700 text-white rounded-lg text-sm py-1 px-2 border-none cursor-pointer">
                           Delete
                         </button>
-                      </Link>
+                      </form>                    
                     </div>
                   </td>
                 </tr>

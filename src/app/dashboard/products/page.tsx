@@ -6,6 +6,7 @@ import Search from "@/app/ui/dashboard/search/search";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchUsers } from "@/app/lib/data";
 import { fetchProducts } from "@/app/lib/data";
+import { deleteProduct } from "@/app/lib/actions";
 
 const ProductsPage= async({ searchParams }) => {
  
@@ -51,11 +52,15 @@ const ProductsPage= async({ searchParams }) => {
                         View
                       </button>
                     </Link>
-                    <Link href="#">
+                    
+                    <form action={deleteProduct}>
+                      <input type="hidden" name="id" value={product.id} />
                       <button className="bg-red-700 text-white rounded-lg text-sm py-1 px-2 border-none cursor-pointer">
                         Delete
                       </button>
-                    </Link>
+                    </form>
+                      
+                    
                   </div>
                 </td>
               </tr>
